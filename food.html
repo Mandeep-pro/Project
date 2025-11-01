@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sikkim Cultural Foods</title>
+
+    <!-- Tailwind CDN for quick prototyping -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Custom earthy tones */
+      :root {
+        --food-brown: #d35400; /* button background */
+        --soft-bg: #f8f4f0; /* page background */
+        --maroon: #7a1f1f; /* heading color */
+      }
+      body {
+        background: var(--soft-bg);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen font-sans text-gray-800">
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-r from-orange-400 to-amber-300 text-white py-6 shadow-md"
+    >
+      <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+        <!-- Left icon -->
+        <img
+          src="monastery.png"
+          alt="Monastery Icon"
+          style="
+            height: 45px;
+            width: 45px;
+            margin-left: 8px;
+            margin-right: 12px;
+          "
+        />
+        <h1 class="text-lg md:text-2xl font-semibold tracking-wide flex-1">
+          Sikkim Cultural Foods 🍲
+        </h1>
+        <nav class="text-sm opacity-90">
+          <a href="#" class="hover:underline">Home</a>
+          <span class="mx-2">•</span>
+          <a href="#" class="hover:underline">Monasteries</a>
+        </nav>
+        <!-- Right SIH 2025 logo -->
+        <img
+          src="sih-logo.jpg"
+          alt="SIH 2025 Logo"
+          style="
+            height: 45px;
+            width: auto;
+            margin-right: 8px;
+            margin-left: 12px;
+          "
+        />
+      </div>
+    </header>
+
+    <!-- Food list -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.querySelector("header nav a");
+        if (homeLink && homeLink.textContent.trim().toLowerCase() === "home") {
+          homeLink.style.cursor = "pointer";
+          homeLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "monest2.html";
+          });
+        }
+      });
+    </script>
+    <main class="max-w-4xl mx-auto px-4 mt-6">
+      <ul class="grid grid-cols-1 gap-5">
+        <!-- Food Item 1: Momos -->
+        <li class="bg-white rounded-xl p-4 shadow-md flex items-center gap-4">
+          <figure
+            class="w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-amber-50 flex items-center justify-center"
+          >
+            <img src="momo.avif" alt="Momos" class="w-24 h-24 object-contain" />
+          </figure>
+
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[var(--maroon)]">1. Momos</h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Steamed dumplings filled with vegetables or meat, served with
+              spicy chutney.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 items-end">
+            <a
+              href="tel:+911234567890"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--food-brown)] text-white text-sm hover:bg-[#e67e22]"
+            >
+              Call Vendor
+            </a>
+          </div>
+        </li>
+
+        <!-- Food Item 2: Thukpa -->
+        <li class="bg-white rounded-xl p-4 shadow-md flex items-center gap-4">
+          <figure
+            class="w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-amber-50 flex items-center justify-center"
+          >
+            <img
+              src="thupka.jpg"
+              alt="Thukpa"
+              class="w-24 h-24 object-contain"
+            />
+          </figure>
+
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[var(--maroon)]">
+              2. Thukpa
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Traditional Tibetan noodle soup rich in flavor and spices.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 items-end">
+            <a
+              href="tel:+911234567891"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--food-brown)] text-white text-sm hover:bg-[#e67e22]"
+            >
+              Call Vendor
+            </a>
+          </div>
+        </li>
+
+        <!-- Food Item 3: Phagshapa -->
+        <li class="bg-white rounded-xl p-4 shadow-md flex items-center gap-4">
+          <figure
+            class="w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-amber-50 flex items-center justify-center"
+          >
+            <img
+              src="phasga.png"
+              alt="Phagshapa"
+              class="w-24 h-24 object-contain"
+            />
+          </figure>
+
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[var(--maroon)]">
+              3. Phagshapa
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Delicious pork dish with radishes and red chilies.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 items-end">
+            <a
+              href="tel:+911234567892"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--food-brown)] text-white text-sm hover:bg-[#e67e22]"
+            >
+              Call Vendor
+            </a>
+          </div>
+        </li>
+
+        <!-- Food Item 4: Sel Roti -->
+        <li class="bg-white rounded-xl p-4 shadow-md flex items-center gap-4">
+          <figure
+            class="w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-amber-50 flex items-center justify-center"
+          >
+            <img
+              src="sel roti.jpg"
+              alt="Sel Roti"
+              class="w-24 h-24 object-contain"
+            />
+          </figure>
+
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[var(--maroon)]">
+              4. Sel Roti
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Traditional Nepali bread made of rice flour, crispy and sweet.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 items-end">
+            <a
+              href="tel:+911234567893"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--food-brown)] text-white text-sm hover:bg-[#e67e22]"
+            >
+              Call Vendor
+            </a>
+          </div>
+        </li>
+
+        <!-- Food Item 5: Sha Phaley -->
+        <li class="bg-white rounded-xl p-4 shadow-md flex items-center gap-4">
+          <figure
+            class="w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-amber-50 flex items-center justify-center"
+          >
+            <img
+              src="shaPag.jpg"
+              alt="Sha Phaley"
+              class="w-24 h-24 object-contain"
+            />
+          </figure>
+
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[var(--maroon)]">
+              5. Sha Phaley
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Fried bread stuffed with seasoned meat and cabbage.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 items-end">
+            <a
+              href="tel:+911234567894"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--food-brown)] text-white text-sm hover:bg-[#e67e22]"
+            >
+              Call Vendor
+            </a>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

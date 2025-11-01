@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>360° Image Toggle Viewer</title>
+
+    <!-- Pannellum CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/pannellum/build/pannellum.css"
+    />
+
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: #111;
+        color: #eee;
+        font-family: system-ui, sans-serif;
+      }
+
+      header {
+        padding: 12px;
+        background: #222;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        border-bottom: 1px solid #333;
+      }
+
+      button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        background: #1976d2;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #1565c0;
+      }
+
+      .viewer {
+        flex: 1;
+        position: relative;
+      }
+      #panorama {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <div class="viewer" style="position: relative;">
+      <div id="panorama"></div>
+      <button id="arrow-next" aria-label="Next" style="position: absolute; top: 50%; right: 18px; transform: translateY(-50%); background: #1976d2; color: #fff; border: none; border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 2px 8px #0002; cursor: pointer; z-index: 10; transition: background 0.2s;">
+        &#8594;
+      </button>
+    </div>
+
+    <!-- Pannellum JS -->
+    <script src="https://unpkg.com/pannellum/build/pannellum.js"></script>
+    <script>
+      // Initial viewer setup
+      const viewer = pannellum.viewer("panorama", {
+        default: {
+          panorama: "1.png",
+          firstScene: "1.png",
+          sceneFadeDuration: 1000,
+        },
+        scenes: {
+          scene1: {
+            type: "equirectangular",
+            panorama: "1.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene2: {
+            type: "equirectangular",
+            panorama: "2.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene3: {
+            type: "equirectangular",
+            panorama: "3.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene4: {
+            type: "equirectangular",
+            panorama: "4.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene5: {
+            type: "equirectangular",
+            panorama: "5.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene6: {
+            type: "equirectangular",
+            panorama: "6.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene7: {
+            type: "equirectangular",
+            panorama: "7.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+          scene8: {
+            type: "equirectangular",
+            panorama: "8.png",
+            hfov: 100,
+            pitch: 0,
+            yaw: 0,
+          },
+        },
+      });
+
+      // Arrow button logic
+      let currentScene = 1;
+      const totalScenes = 8;
+      document.getElementById("arrow-next").addEventListener("click", () => {
+        currentScene = currentScene < totalScenes ? currentScene + 1 : 1;
+        viewer.loadScene("scene" + currentScene);
+      });
+    </script>
+  </body>
+</html>
